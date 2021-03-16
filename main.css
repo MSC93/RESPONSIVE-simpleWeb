@@ -1,0 +1,113 @@
+/* custom properties */
+:root {
+  --clr-neutrl: #fff;
+  --clr-300: #b8b8b8;
+  --clr-400: #5acfa0;
+  --clr-500: #ff9a35;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.6;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 900;
+  line-height: 1;
+}
+
+h2,
+h3,
+p {
+  margin-bottom: 1em;
+}
+
+.bg-light {
+  background: linear-gradient(
+    to right,
+    rgba(162, 64, 241, 0.781),
+    rgba(236, 118, 40, 0.898)
+  );
+}
+
+.bg-dark {
+  color: var(--clr-neutrl);
+  background-color: var(--clr-400);
+}
+
+.bg-accent {
+  color: var(--clr-neutrl);
+  background-color: var(--clr-500);
+}
+.bg-accent h2,
+.bg-dark h2 {
+  color: #2c2c2c;
+}
+
+header,
+section {
+  padding: 4rem 0;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+.container--narrow {
+  max-width: 30rem;
+}
+.img-size {
+  display: block;
+  max-width: 100%;
+  width: 500px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 40em) {
+  .split {
+    flex-direction: row;
+  }
+  /* truco apra que las columnas sean iguales en tamaño */
+  .split > * {
+    flex-basis: 100%;
+  }
+
+  /* separacion texto imagen aplicable a safari */
+  .split > * + * {
+    margin-left: 2em;
+  }
+
+  header,
+  section {
+    padding: 7rem 0;
+  }
+}
